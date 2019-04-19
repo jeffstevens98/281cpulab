@@ -1,0 +1,4 @@
+irmovq $8, %rcx
+rmmovq %rcx, 0x16(%rdx)
+mrmovq 0x16(%rdx), %rbx
+halt

@@ -1,0 +1,9 @@
+irmovq $0x200, %rsp
+irmovq $0xf, %rax
+irmovq $0xb, %rcx
+pushq %rax 
+pushq %rcx
+popq %rdx
+popq %rbx
+halt
+ 

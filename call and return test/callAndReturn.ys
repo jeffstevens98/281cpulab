@@ -1,0 +1,10 @@
+nop
+#define rsp in every program
+irmovq $0x200, %rsp 
+irmovq $1, %rax
+call funkshun
+irmovq $2, %rax
+halt
+funkshun:
+  irmovq $12, %rax
+  ret

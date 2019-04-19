@@ -1,0 +1,19 @@
+irmovq $5, %rax
+irmovq $10, %rdi
+addq %rax, %rdi
+rrmovq %rax, %rcx
+rmmovq %rcx, $0x1
+mrmovq $0x1, %rbx
+pushq %rax
+popq %r8
+nop
+prettyGoodFunction:
+	irmovq $69, %rax
+	retq:
+nop
+call prettyGoodFunction
+jmp 0x10
+nop
+nop
+cmovl %r8, %rax
+halt

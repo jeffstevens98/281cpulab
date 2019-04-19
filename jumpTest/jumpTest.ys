@@ -1,0 +1,12 @@
+jmp 0x17
+nop
+irmovq $6, %rcx
+nop
+halt
+nop
+irmovq $7, %rax
+addq %rcx, %rax
+jge 0x2d
+halt
+irmovq $8, %rdx
+halt

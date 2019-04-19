@@ -1,0 +1,4 @@
+irmovq $7, %rax
+irmovq $3, %rcx
+addq %rax, %rcx
+subq %rcx, %rax
