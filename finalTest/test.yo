@@ -1,0 +1,22 @@
+0x000: 30f00500000000000000 | irmovq $5, %rax
+0x00a: 30f10a00000000000000 | irmovq $10, %rcx
+0x014: 30f70000000000000000 | irmovq $0, %rdi
+0x01e: 30f40002000000000000 | irmovq $0x200, %rsp
+0x028: 6001                 | addq %rax, %rcx
+0x02a: 2002                 | rrmovq %rax, %rdx
+0x02c: 40270800000000000000 | rmmovq %rdx, 0x8(%rdi)
+0x036: 50370800000000000000 | mrmovq 0x8(%rdi), %rbx
+0x040: a00f                 | pushq %rax
+0x042: b08f                 | popq %r8
+0x044: 10                   | nop
+0x045: 806f00000000000000   | call prettyGoodFunction
+0x04e: 705800000000000000   | jmp 0x58
+0x057: 00                   | halt
+0x058: 6180                 | subq %r8, %rax
+0x05a: 756400000000000000   | jge 0x64
+0x063: 00                   | halt
+0x064: 30f00600000000000000 | irmovq $6, %rax
+0x06e: 00                   | halt
+0x06f:                      | prettyGoodFunction:
+0x06f: 30f00c00000000000000 | 	irmovq $12, %rax
+0x079: 90                   | 	ret
